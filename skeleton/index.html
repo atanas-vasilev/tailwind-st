@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math App</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Use a dark background color for the body */
+    body {
+      background-color: #1a202c;
+    }
+    /* Use white text for the navbar */
+    nav {
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="h-screen">
+  <div class="container flex h-screen max-w-full">
+    <aside class="w-1/5 bg-gray-800 p-4">
+      <h1 class="text-2xl font-bold text-white">Math App</h1>
+      <h2 class="text-lg font-light text-white">Spaced Repetition</h2>
+      <form class="mt-8">
+        <label for="difficulty" class="block font-bold text-xl mb-2 text-white">Difficulty</label>
+        <select id="difficulty" class="form-input block w-full rounded-lg shadow-lg py-2 px-3 bg-white text-white">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <label for="category" class="block font-bold text-xl mt-4 mb-2 text-white">Category</label>
+        <select id="category" class="form-input block w-full rounded-lg shadow-lg py-2 px-3 bg-white text-white">
+          <option value="arithmetic">Addition</option>
+          <option value="algebra">Algebra</option> 
+          <option value="geometry">Geometry</option>
+        </select>
+        <!-- Add other input fields here -->
+        <button type="submit" class="btn btn-primary block w-full mt-4 rounded-lg shadow-lg text-white">Save</button>
+      </form>
+      <div class="relative rounded-md shadow-sm">
+        <select id="difficulty" class="form-input block w-full py-2 px-3 leading-5 rounded-md bg-gray-800 text-white">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="relative mt-4 rounded-md shadow-sm">
+        <select id="category" class="form-input block w-full py-2 px-3 leading-5 rounded-md bg-gray-800 text-white">
+          <option value="arithmetic">Arithmetic</option>
+          <option value="algebra">Algebra</option>
+          <option value="geometry">Geometry</option>
+        </select>
+        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="text-center text-gray-500 mt-8">
+        Created by ChatGPT
+      </div>
+    </aside>
+    <main class="flex-grow bg-gray-900 flex justify-center items-center p-6">
+      <div class="card rounded-lg shadow-lg w-full max-w-xs bg-gray-800">
+        <div class="card-body text-center p-6">
+          <p class="text-5xl font-bold text-white">4 x 8 =</p>
+          <input type="text" class="form-input block w-full rounded-lg shadow-lg py-2 px-3 mt-4 bg-white text-white" placeholder="Enter answer here">
+        </div>
+        <div class="card-footer flex justify-between p-6">
+          <button class="btn btn-round btn-secondary px-4 py-2 border border-gray-600 rounded-full text-white"><</button>
+          <button class="btn btn-primary px-4 py-2 border border-gray-600 rounded-full text-white">SAVE</button>
+          <button class="btn btn-round btn-secondary px-4 py-2 border border-gray-600 rounded-full text-white">></button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- Add JavaScript for handling form submissions and displaying math problems here -->
+</body>
+</html>
